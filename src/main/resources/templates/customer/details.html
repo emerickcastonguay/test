@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+
+    <title>Détails</title>
+
+    <link th:replace="/fragments/head.html::bootstrap">
+    <link th:replace="/fragments/head.html::css">
+</head>
+<body>
+<nav th:replace="/fragments/header.html::top-nav"></nav>
+
+<h3>Détail du client <span th:text="${customer.firstName} + ' ' + ${customer.lastName}"></span></h3>
+
+<div class="mt-2">
+    <p>Prénom: <u th:text="${customer.lastName}"></u></p>
+    <p>Nom: <u th:text="${customer.firstName}"></u></p>
+    <p>Email: <u th:text="${customer.email}"></u></p>
+    <p>Addresse: <u th:text="${customer.getAddress().getAddress()}"></u></p>
+    <p>Ville: <u th:text="${customer.getAddress().getCity().getCity()}"></u></p>
+    <p>Pays: <u th:text="${customer.getAddress().getCity().getCountry().getCountry()}"></u></p>
+</div>
+
+<footer th:replace="/fragments/footer.html::footer"></footer>
+</body>
+</html>

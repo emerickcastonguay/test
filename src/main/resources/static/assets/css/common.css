@@ -1,0 +1,19 @@
+body {
+    background-color: #212529 !important;
+}
+
+p, h1, h2, h3, h4, h5, h6, label {
+    color: white;
+    margin-bottom: 0;
+}
+
+.input-group {
+    width: 20rem !important;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    background-color: DarkSalmon;
+}
+

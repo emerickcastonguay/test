@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="common(title)">
+    <meta charset="UTF-8"/>
+
+    <title th:text="${title}"></title>
+
+    <link th:include="::bootstrap">
+    <link th:include="::css">
+</head>
+
+<link th:fragment="bootstrap" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"/>
+<link th:fragment="css" rel="stylesheet" th:href="@{/assets/css/common.css}"/>
+</html>
